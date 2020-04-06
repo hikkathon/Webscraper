@@ -7,6 +7,31 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <DockPanel>
+                <Menu>
+                    <MenuItem Header="File"/>
+                </Menu>
+                <Button x:Name="BtnScraper"
+                        DockPanel.Dock="Right"
+                        Width="50"
+                        Content="Scrape"
+                        Margin="0 0 10 0"
+                        Click="BtnScraper_Click"/>
+                <TextBox DockPanel.Dock="Bottom"
+                         x:Name="TbPage"
+                         Height="20"
+                         Text="Webpage.."
+                         Margin="0 0 10 0"/>
+            </DockPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <DataGrid ItemsSource="{Binding Entries}"/>
+        </Grid>
     </Grid>
 </Window>
