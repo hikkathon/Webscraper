@@ -14,8 +14,12 @@
 
         <Grid Grid.Row="0">
             <DockPanel>
-                <Menu>
-                    <MenuItem Header="File"/>
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="File">
+                        <MenuItem Header="Export">
+                            
+                        </MenuItem>
+                    </MenuItem>
                 </Menu>
                 <Button x:Name="BtnScraper"
                         DockPanel.Dock="Right"

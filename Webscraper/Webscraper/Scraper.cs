@@ -19,6 +19,7 @@ namespace Webscraper
             set { _entries = value; }
         }
 
+        // https://mmohuts.com/news/?sort=reviews
         public void ScrapeData(string page)
         {
             var web = new HtmlWeb();
